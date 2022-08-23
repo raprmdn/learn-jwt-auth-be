@@ -1,0 +1,26 @@
+GET http://localhost:5000/users
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwibmFtZSI6IkpvaG4gRG9lIiwiZW1haWwiOiJqb2huQGVtYWlsLmNvbSIsImlhdCI6MTY2MTI0ODY4MSwiZXhwIjoxNjYxMjQ4NzAxfQ.ZLZNLPrDXbr0wKUSvjighuSLDTtzdiTBHb4PuyPDg2c
+
+###
+
+POST http://localhost:5000/register
+Content-Type: application/json
+
+{
+  "name": "John Doe",
+  "email": "john@email.com",
+  "password": "123123123",
+  "password_confirmation": "123123123"
+}
+
+###
+POST http://localhost:5000/login
+Content-Type: application/json
+
+{
+  "email": "john@email.com",
+  "password": "123123123"
+}
+
+###
+GET http://localhost:5000/refresh-token
